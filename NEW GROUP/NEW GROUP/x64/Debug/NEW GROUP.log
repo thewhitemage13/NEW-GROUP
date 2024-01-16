@@ -1,0 +1,13 @@
+﻿  NEW GROUP.cpp
+D:\C++\C++ OOP\NEW GROUP\NEW GROUP\NEW GROUP.cpp(82,14): warning C4101: title: неиспользованная локальная переменная
+D:\C++\C++ OOP\NEW GROUP\NEW GROUP\NEW GROUP.cpp(146,27): warning C4018: <: несоответствие типов со знаком и без знака
+D:\C++\C++ OOP\NEW GROUP\NEW GROUP\NEW GROUP.cpp(152,27): warning C4018: <: несоответствие типов со знаком и без знака
+D:\C++\C++ OOP\NEW GROUP\NEW GROUP\NEW GROUP.cpp(158,27): warning C4018: <: несоответствие типов со знаком и без знака
+D:\C++\C++ OOP\NEW GROUP\NEW GROUP\NEW GROUP.cpp(213,27): warning C4018: <: несоответствие типов со знаком и без знака
+D:\C++\C++ OOP\NEW GROUP\NEW GROUP\NEW GROUP.cpp(227,27): warning C4018: <: несоответствие типов со знаком и без знака
+D:\C++\C++ OOP\NEW GROUP\NEW GROUP\NEW GROUP.cpp(245,27): warning C4018: <: несоответствие типов со знаком и без знака
+D:\C++\C++ OOP\NEW GROUP\NEW GROUP\NEW GROUP.cpp(258,27): warning C4018: <: несоответствие типов со знаком и без знака
+D:\C++\C++ OOP\NEW GROUP\NEW GROUP\NEW GROUP.cpp(276,27): warning C4018: <: несоответствие типов со знаком и без знака
+D:\C++\C++ OOP\NEW GROUP\NEW GROUP\NEW GROUP.cpp(289,27): warning C4018: <: несоответствие типов со знаком и без знака
+D:\C++\C++ OOP\NEW GROUP\NEW GROUP\NEW GROUP.cpp(299,27): warning C4018: <: несоответствие типов со знаком и без знака
+  NEW GROUP.vcxproj -> D:\C++\C++ OOP\NEW GROUP\x64\Debug\NEW GROUP.exe
