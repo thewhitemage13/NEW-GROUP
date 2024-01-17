@@ -1,4 +1,4 @@
-﻿#include <iostream>
+#include <iostream>
 #include <ctime>
 #include <string>
 #include <fstream>
@@ -74,14 +74,6 @@ public:
     {
         if (day == 0 || day > 31) throw "ERROR!!! The day must be from 0 to 31 !!!";
         this->day = day;
-    }
-    //Решил в класс Date добавить функцию, которая показывает время 
-    void TimeNow()
-    {
-        SYSTEMTIME st;
-        char title[200];
-        GetSystemTime(&st);
-        printf("%02d:%02d:%02d\n", (st.wHour + 3) % 24, st.wMinute, st.wSecond);
     }
 
     unsigned short GetDay() const
@@ -159,16 +151,14 @@ public:
         {
             this->grade_of_exam[i] = original.grade_of_exam[i];
         }
-        Date d;
         Logger::GetInstance()->Write("Student make copy");
-        d.TimeNow();
+        TimeNow();
     }
 
-    Student() : Student("Studenchenko", "Student", "Studentovich", "Studencheskaya 38", "0630300033") { count++; Date now; Logger::GetInstance()->Write("Student has been created\n"), now.TimeNow(); }
+    Student() : Student("Studenchenko", "Student", "Studentovich", "Studencheskaya 38", "0630300033") { count++;Logger::GetInstance()->Write("Student has been created\n"), TimeNow(); }
 
     Student(string surname, string name, string middlname, string adress, string phonenumber)
     {
-        Date now;
         count++;
         SetSurname(surname);
         SetName(name);
@@ -176,7 +166,7 @@ public:
         SetAdress(adress);
         SetPhone(phonenumber);
         Logger::GetInstance()->Write("Student has been created\n");
-        now.TimeNow();
+        TimeNow();
     }
 
     Student(string surname, string name, string middlname, string adress) :Student(surname, name, middlename, adress, "0687680685") {}
@@ -190,18 +180,28 @@ public:
             delete[] grade_of_homework;
         if (grade_of_exam != nullptr)
             delete[] grade_of_exam;
-        Date now;
         Logger::GetInstance()->Write("Student has been destroyed\n");
-        now.TimeNow();
+        TimeNow();
     }
 
-    void PrintStudent() const
+    void TimeNow()
     {
+        SYSTEMTIME st;
+        char title[200];
+        GetSystemTime(&st);
+        printf("%02d:%02d:%02d\n", (st.wHour + 3) % 24, st.wMinute, st.wSecond);
+    }
+
+    void PrintStudent() 
+    {
+
         cout << "Surname: " << surname << "\n";
         cout << "Name: " << name << "\n";
         cout << "Midlname: " << middlename << "\n";
         cout << "Adress: " << adress << "\n";
         cout << "Phonnumber: " << phonenumber << "\n";
+        Logger::GetInstance()->Write("Student print\n");
+        TimeNow();
     }
     unsigned int GetCount()
     {
